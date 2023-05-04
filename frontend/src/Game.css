@@ -27,19 +27,42 @@
     color: rgb(0, 100, 100);
     font-size: 12px;
     font-weight: bold;
+    margin: 5px;
 }
 
 .controls button:hover {
-    background-color: rgb(0, 100, 100);
-    color: black;
     cursor: pointer;
+    color: azure;
 }
 
-.controls input[type="text"] {
+.controls input {
     background-color: black;
     font-size: 12px;
     font-weight: bold;
-    border: 1px solid rgb(0, 100, 100) !important;
+    border: 1px solid rgb(0, 100, 100, 0.5) !important;
     color: rgb(0, 100, 100);
     text-align: center;
+    width: 100%;
+    min-width: 30px;
+    max-width: 100px;
+    box-sizing: border-box;
+    margin: 5px;
+}
+
+.controls input:hover {
+    cursor: pointer;
+    color: azure;
+    border: 1px solid azure !important;
+}
+
+.controls input:focus {
+    cursor: pointer;
+    color: azure;
+    border: 1px solid azure !important;
+    outline: none;
+}
+
+input:focus-within,
+input:focus-within+span {
+    color: white;
 }
