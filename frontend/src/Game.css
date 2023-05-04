@@ -3,20 +3,37 @@
     margin: 0 auto;
     background-color: #000;
     background-image:
-        linear-gradient(#333 1px, transparent 1px),
-        linear-gradient(90deg, #333 1px, transparent 1px);
+        linear-gradient(#333 1px, transparent 1.5px),
+        linear-gradient(90deg, #333 1px, transparent 1.5px);
 }
 
 .Cell {
-    background: #ccc;
+    background: rgb(0, 100, 100);
     position: absolute;
 }
 
 .controls {
-    margin-top: 20px;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    align-items: center;
+    color: rgb(0, 100, 100);
+    font-size: 12px;
+    font-weight: bold;
 }
 
-.button {
-    margin-left: 12px;
-    cursor: pointer;
+.controls button {
+    background-color: black;
+    border: none;
+    color: rgb(0, 100, 100);
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.controls input[type="text"] {
+    background-color: black;
+    font-size: 12px;
+    font-weight: bold;
+    border: 1px solid rgb(0, 100, 100) !important;
+    color: rgb(0, 100, 100);
+    text-align: center;
 }

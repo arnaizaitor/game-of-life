@@ -3,7 +3,7 @@ import './Game.css';
 
 
 const CELL_SIZE = 20;
-const WIDTH = 800;
+const WIDTH = 1200;
 const HEIGHT = 600;
 
 
@@ -176,16 +176,6 @@ class Game extends React.Component {
         const { cells, interval, isRunning } = this.state;
         return (
             <div>
-                <div className="Board"
-                    style={{ width: WIDTH, height: HEIGHT, backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`}}
-                    onClick={this.handleClick}
-                    ref={(n) => { this.boardRef = n; }}>
-
-                    {cells.map(cell => (
-                        <Cell x={cell.x} y={cell.y} key={`${cell.x},${cell.y}`}/>
-                    ))}
-                </div>
-
                 <div className="controls">
                     Update every <input value={this.state.interval} onChange={this.handleIntervalChange} /> msec
                     {isRunning ?
@@ -194,6 +184,15 @@ class Game extends React.Component {
                     }
                     <button className="button" onClick={this.handleRandom}>Random</button>
                     <button className="button" onClick={this.handleClear}>Clear</button>
+                </div>
+                <div className="Board"
+                    style={{ width: WIDTH, height: HEIGHT, backgroundSize: `${CELL_SIZE}px ${CELL_SIZE}px`}}
+                    onClick={this.handleClick}
+                    ref={(n) => { this.boardRef = n; }}>
+
+                    {cells.map(cell => (
+                        <Cell x={cell.x} y={cell.y} key={`${cell.x},${cell.y}`}/>
+                    ))}
                 </div>
             </div>
         );
